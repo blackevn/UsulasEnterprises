@@ -16,15 +16,23 @@ export interface CarProps {
 }
 
 export interface FilterProps {
-  manufacturer?: string;
-  year?: number;
-  model?: string;
-  limit?: number;
-  fuel?: string;
+  manufacturer: string;
+  year: number;
+  model: string;
+  limit: number;
+  fuel: string;
+  category: string
 }
 
 export interface HomeProps {
   searchParams: FilterProps;
+  params: AllProductsType
+  allProducts: AllProductsType
+}
+
+export interface ProductsPageProps {
+  searchParams: FilterProps;
+  allProducts: AllProductsType[]
 }
 
 export interface CarCardProps {
@@ -60,6 +68,24 @@ export interface CustomFilterProps {
 export interface ShowMoreProps {
   pageNumber: number;
   isNext: boolean;
+}
+
+export interface AllProductsType {
+  manufacturer: string
+  image?: string
+  name?: string
+  fuel?: boolean
+  type?: string
+  category: string
+  price?: number
+  model: string;
+  make?: string;
+  transmission?: string;
+  year: number;
+  drive?: string;
+  limit?: number
+
+
 }
 
 export interface SearchManuFacturerProps {

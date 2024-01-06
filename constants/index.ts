@@ -1,46 +1,22 @@
 export const manufacturers = [
-  "Acura",
-  "Alfa Romeo",
-  "Aston Martin",
-  "Audi",
-  "Bentley",
-  "BMW",
-  "Buick",
-  "Cadillac",
-  "Chevrolet",
-  "Chrysler",
-  "Citroen",
-  "Dodge",
-  "Ferrari",
-  "Fiat",
-  "Ford",
-  "GMC",
+  "Perkins",
+  "Cummins",
   "Honda",
-  "Hyundai",
-  "Infiniti",
-  "Jaguar",
-  "Jeep",
-  "Kia",
-  "Lamborghini",
-  "Land Rover",
-  "Lexus",
-  "Lincoln",
-  "Maserati",
-  "Mazda",
-  "McLaren",
-  "Mercedes-Benz",
-  "MINI",
-  "Mitsubishi",
-  "Nissan",
-  "Porsche",
-  "Ram",
-  "Rolls-Royce",
-  "Subaru",
-  "Tesla",
-  "Toyota",
-  "Volkswagen",
-  "Volvo",
+
 ];
+
+
+export const categories = [ 
+  "Lawn Mower",
+  "Water Pump",
+  "Electric Pump",
+  "Ladder",
+  "Sewage Pump",
+  "Booster",
+  "Hose",
+  "Electric Generator"
+]
+
 
 export const yearsOfProduction = [
   { title: "Year", value: "" },
@@ -57,16 +33,16 @@ export const yearsOfProduction = [
 
 export const fuels = [
   {
-    title: "Fuel",
+    title: "Fuel Type",
     value: "",
   },
   {
-    title: "Gas",
-    value: "Gas",
+    title: "Petrol",
+    value: "Petrol",
   },
   {
-    title: "Electricity",
-    value: "Electricity",
+    title: "Diesel",
+    value: "Diesel",
   },
 ];
 
