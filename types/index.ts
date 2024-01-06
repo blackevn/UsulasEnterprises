@@ -26,8 +26,6 @@ export interface FilterProps {
 
 export interface HomeProps {
   searchParams: FilterProps;
-  params: AllProductsType
-  allProducts: AllProductsType
 }
 
 export interface ProductsPageProps {

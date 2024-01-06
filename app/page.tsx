@@ -4,7 +4,7 @@ import { ProductCard, ShowMore, SearchBar, CustomFilter, Hero, AllProducts } fro
 import getProducts from "./actions/getProducts";
 
 
-export default async function Home({ searchParams, params }: HomeProps) {
+export default async function Home({ searchParams}: HomeProps) {
 
   const allProducts = await getProducts({
     manufacturer: searchParams.manufacturer,
