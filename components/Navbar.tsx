@@ -1,13 +1,28 @@
+"use client"
+
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 import CustomButton from "./CustomButton";
+import { FaArrowAltCircleRight, FaPhone } from "react-icons/fa";
+import NavLink from "./NavLink";
+import { navlinks } from "@constants";
+import { IconBaseProps } from "react-icons";
 
 
-const NavBar = () => (
+const Navbar = () => {
 
-  <header className='w-full  absolute z-10'>
+
+  const path = usePathname()
+
+  const isPath = path === "/products"
+
+  console.log(isPath);
+  
+
+  return (
+    <header className='w-full  absolute z-10'>
     <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent'>
       <Link href='/' className='flex justify-center items-center'>
         <Image
@@ -19,17 +34,26 @@ const NavBar = () => (
         />
       </Link>
 
- 
+      <div className="flex gap-4 items-center justify-between">
+       {navlinks.map((item) => <NavLink link={item.link} name={item.name}/>)}
+      </div>
 
-      <Link href={`/products`}>
+     
+    {!isPath ?  <Link href={`/products`}>
       <CustomButton
-        title='Browser All Products'
-        btnType='button'
-        containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
-        />
+        icon={FaArrowAltCircleRight}
+        text='Browser All Products'
+        modifier='text-primary-blue rounded-full bg-white min-w-[130px]'
+        /> 
         </Link>
+        : 
+        <Link href={`/contact`}>
+        <CustomButton icon={FaPhone} text="Call an agent"/>
+        </Link>}
     </nav>
   </header>
-);
+  )
+}
 
-export default NavBar;
+export default Navbar
+

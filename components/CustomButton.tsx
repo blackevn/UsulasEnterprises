@@ -1,28 +1,65 @@
-"use client";
+'use client'
 
-import Image from "next/image";
 
-import { CustomButtonProps } from "@types";
+import { ButtonProps } from "@types";
+import { FaIcons } from "react-icons/fa"
 
-const Button = ({ isDisabled, btnType, containerStyles, textStyles, title, rightIcon, handleClick }: CustomButtonProps) => (
-  <button
-    disabled={isDisabled}
-    type={btnType || "button"}
-    className={`custom-btn ${containerStyles}`}
-    onClick={handleClick}
-  >
-    <span className={`flex-1 ${textStyles}`}>{title}</span>
-    {rightIcon && (
-      <div className="relative w-6 h-6">
-        <Image
-          src={rightIcon}
-          alt="arrow_left"
-          fill
-          className="object-contain"
-        />
-      </div>
-    )}
-  </button>
-);
+const Button: React.FC<ButtonProps> = (props) => {
+
+    const {
+
+           text = "Button", 
+           textColor, 
+           bgColor, 
+           clickEvent, 
+           borderColor, 
+           icon: Icon = FaIcons, 
+           children,
+           modifier,
+           tip,
+           isActive,
+           disabled
+           
+          
+          } = props
+
+  return (
+    <>
+    
+    <button type="button" disabled={disabled} onClick={clickEvent}
+    
+    className={`
+        p-4
+        flex
+        items-center
+        justify-center
+        gap-2
+        rounded-full
+        btn-sm
+        text-[12px]
+        lg: text-md
+        
+        ${isActive}
+        ${modifier}
+        ${borderColor} 
+        ${textColor}
+        ${bgColor}
+     
+ 
+    `}
+
+     data-tip={tip}
+    
+          >
+            <Icon/>
+            {text}
+            {children}
+        
+        </button>
+
+    </>
+  )
+}
+
 
 export default Button;

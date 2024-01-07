@@ -2,8 +2,27 @@ export const manufacturers = [
   "Perkins",
   "Cummins",
   "Honda",
+  "Caterpillar",
+  "Pentax",
+  "LuckyPro",
+  "Dongyin",
+  "Husqvarna",
+  "Pedrollo",
+  "KAMA",
+  "Champion",
+  "PrimePump",
+  "Leo",
+  "Koshin",
+  "DuroMax"
 
 ];
+
+export const services = [
+  { title: "Products", desc: "We have all kinds of  hardware products", image: "" },
+  { title: "Service and repair", desc: "We Offer The Best Services", image: ""  },
+  { title: "Free delivery", desc: "We Transport to Your Destination", image: ""  },
+  { title: "Rentals", desc: "We Rent and Help You Installation", image: ""  },
+]
 
 
 export const categories = [ 
@@ -15,6 +34,26 @@ export const categories = [
   "Booster",
   "Hose",
   "Electric Generator"
+]
+
+export const navlinks = [
+  {
+   link: "/",
+   name: "Home"
+  },
+  {
+   link: "/products",
+   name: "Products"
+  },
+  {
+   link: "/contact",
+   name: "Contact"
+  },
+  {
+   link: "/about",
+   name: "About"
+  },
+ 
 ]
 
 

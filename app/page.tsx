@@ -1,6 +1,6 @@
 import { HomeProps } from "@types";
 import { fuels, yearsOfProduction } from "@constants";
-import { ProductCard, ShowMore, SearchBar, CustomFilter, Hero, AllProducts } from "@components";
+import { ProductCard, ShowMore, SearchBar, CustomFilter, Hero, AllProducts, Services } from "@components";
 import getProducts from "./actions/getProducts";
 
 
@@ -20,6 +20,7 @@ export default async function Home({ searchParams}: HomeProps) {
   return (
     <main className='overflow-hidden'>
       <Hero />
+      <Services/>
       <AllProducts searchParams={searchParams} allProducts={allProducts}/>
     </main>
   );

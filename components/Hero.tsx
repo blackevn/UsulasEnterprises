@@ -3,6 +3,8 @@
 import Image from "next/image";
 
 import { CustomButton } from "@components";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import HeroCarousel from "./HeroCarousel";
 
 const Hero = () => {
   const handleScroll = () => {
@@ -26,17 +28,18 @@ const Hero = () => {
         </p>
 
         <CustomButton
-          title="Explore Cars"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10"
-          handleClick={handleScroll}
+          text="Explore Cars"
+          modifier="bg-primary-blue text-white rounded-full mt-10"
+          clickEvent={handleScroll}
+          icon={FaArrowAltCircleRight}
         />
       </div>
-      <div className="hero__image-container">
-        <div className="hero__image">
-          <Image src="/hero.png" alt="hero" fill className="object-contain" />
+      <div className="w-[50%] grid place-items-center">
+        <div className="">
+          <HeroCarousel/>
+          {/* <Image src="/hero.png" alt="hero" fill className="object-contain" /> */}
         </div>
 
-        <div className="hero__image-overlay" />
       </div>
     </div>
   );

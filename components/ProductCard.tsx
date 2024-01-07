@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
 import { calculateCarRent } from "@utils";
 import { AllProductsType, CarProps } from "@types";
 import CustomButton from "./CustomButton";
 import ProductDetails from "./ProductsDetails";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 interface ProductCardProps {
   item: AllProductsType;
@@ -46,11 +46,10 @@ const ProductCard = ({ item }: ProductCardProps) => {
 
         <div className="car-card__btn-container">
           <CustomButton
-            title='View More'
-            containerStyles='w-full py-[16px] rounded-full bg-primary-blue'
-            textStyles='text-white text-[14px] leading-[17px] font-bold'
-            rightIcon='/right-arrow.svg'
-            handleClick={() => setIsOpen(true)}
+            modifier="w-full hover:bg-blue-500 rounded-lg p-2 text-white" 
+            text='View More'
+            icon={FaArrowAltCircleRight}
+            clickEvent={() => setIsOpen(true)}
           />
         </div>
       </div>

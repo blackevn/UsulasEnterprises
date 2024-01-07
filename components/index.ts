@@ -9,8 +9,12 @@ import Hero from "./Hero";
 import Categories from "./Categories";
 import CategoryBox from "./CategoryBox";
 import AllProducts from "./AllProducts";
+import SelectFilter from "./SelectFilter";
+import Services from "./Services";
+import ServicesCard from "./ServicesCard";
 
 export {
+  
   Hero,
   ProductCard,
   CustomButton,
@@ -20,4 +24,8 @@ export {
   ShowMore,
   AllProducts,
   SearchBar,
+  Services,
+  SelectFilter,
+  ServicesCard
+
 };
