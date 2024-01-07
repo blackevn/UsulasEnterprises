@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ShowMoreProps } from "@types";
 import { updateSearchParams } from "@utils";
 import { CustomButton } from "@components";
+import { FaArrowCircleDown } from "react-icons/fa";
 
 const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
   const router = useRouter();
@@ -23,10 +24,10 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     <div className="w-full flex-center gap-5 mt-10">
       {!isNext && (
         <CustomButton
-          btnType="button"
-          title="Show More"
-          containerStyles="bg-primary-blue rounded-full text-white"
-          handleClick={handleNavigation}
+          icon={FaArrowCircleDown}
+          text="Show More"
+          modifier="bg-primary-blue rounded-full text-white"
+          clickEvent={handleNavigation}
         />
       )}
     </div>
