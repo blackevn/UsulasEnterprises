@@ -11,7 +11,7 @@ const HeroCarousel = () => {
             max: 3000,
             min: 1024
           },
-          items: 3,
+          items: 2,
           partialVisibilityGutter: 40
         },
         mobile: {
@@ -41,7 +41,7 @@ const HeroCarousel = () => {
   arrows
   autoPlaySpeed={3000}
   centerMode={true}
-  className="w-full h-full bg-black"
+  className="w-[500px] h-[500px]"
   dotListClass=""
   draggable
   focusOnSelect={false}
@@ -63,7 +63,9 @@ const HeroCarousel = () => {
   slidesToSlide={1}
   swipeable
 >
-  <div className='w-full h-full bg-black'></div>
+  <div className='w-full h-full bg-black p-20 rounded-full'></div>
+  <div className='w-full h-full bg-black p-20 rounded-full'></div>
+  <div className='w-full h-full bg-black p-20 rounded-full'></div>
 </Carousel>
   )
 }
