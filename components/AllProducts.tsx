@@ -11,6 +11,8 @@ import { CustomButton } from "@components";
 import { usePathname } from "next/navigation";
 import { IconBaseProps } from "react-icons";
 import { GrPowerReset } from "react-icons/gr";
+import Button from "./CustomButton";
+import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
 
@@ -25,8 +27,11 @@ const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
   const [checkboxChecked, setCheckboxChecked] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
-  
+  const [currentPage, setCurrentPage] = useState(1);
+
   const path = usePathname()
+  const totalProducts = filteredProducts.length;
+  const productsPerPage = 12;
 
   const isPath = path === "/products"
 
@@ -55,6 +60,9 @@ const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
     setFilteredProducts(filteredResults);
   }, [manufacturer, year, model, fuel, checkboxChecked, category, searchTerm]);
 
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
 
   return (
@@ -121,19 +129,41 @@ const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
     
 
       {/* Display filtered products */}
-      <div className="py-10">
+      <div className="py-10 ">
        
-      { filteredProducts.length ?  <div className="grid grid-cols-3 gap-4">
-          {filteredProducts.map((product) => ( 
-          
-              <ProductCard item={product}/>
-         
+      { filteredProducts.length ? <div>
+
+      <div className="grid grid-cols-3 gap-4">
+          {currentProducts.map(product => (
+            <ProductCard item={product}/>  
           ))}
-        </div> : 
+
+        </div> 
+          <div className="flex justify-center w-full gap-4 p-4">
+
+            <Button 
+              clickEvent={() => setCurrentPage(prev => prev - 1)}
+              disabled={currentPage === 1}
+              text="Prev"
+              icon={FaArrowAltCircleLeft}
+              modifier={`bg-gray-200 ${currentPage === 1 ? "bg-gray-50 text-gray-200" : ""}`}
+            />
+
+            <Button
+              modifier="flex-row-reverse bg-gray-200"
+              clickEvent={() => setCurrentPage(prev => prev + 1)} 
+              disabled={currentPage === Math.ceil(totalProducts / productsPerPage)}
+              text="Next"
+              icon={FaArrowAltCircleRight}
+            /> 
+            
+          </div>
+      </div>  
+    : 
         <div className="w-full grid place-items-center h-[300px]">
           <div className="flex flex-col gap-2 justify-center items-center text-gray-600">
             <LuSearchX className="text-7xl "/>
-          <h1> No product matches your search </h1>
+            <h1> No product matches your search </h1>
           </div>   
           </div>
         }

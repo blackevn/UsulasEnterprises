@@ -12,9 +12,6 @@
 }
 
 /* START: General styles */
-.max-width {
-  @apply max-w-[1440px] mx-auto;
-}
 
 .padding-x {
   @apply sm:px-16 px-6;
@@ -39,7 +36,7 @@
 
 /* START: Hero styles */
 .hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 mx-auto;
 }
 
 .hero__title {

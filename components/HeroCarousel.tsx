@@ -41,7 +41,7 @@ const HeroCarousel = () => {
   arrows
   autoPlaySpeed={3000}
   centerMode={true}
-  className="w-[500px] h-[500px]"
+  className=""
   dotListClass=""
   draggable
   focusOnSelect={false}

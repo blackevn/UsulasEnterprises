@@ -51,4 +51,60 @@ export const AllProducts: AllProductsType[] = [
     manufacturer: "FG Wilson",
     power: "175 kVA"
 }  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "P175-6",
+    manufacturer: "FG Wilson",
+    power: "175 kVA"
+}  ,
 ]
