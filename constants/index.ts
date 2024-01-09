@@ -21,10 +21,10 @@ export const manufacturers = [
 ];
 
 export const services = [
-  { title: "Products", desc: "We have all kinds of  hardware products", image: "" },
-  { title: "Service and repair", desc: "We Offer The Best Services", image: ""  },
-  { title: "Free delivery", desc: "We Transport to Your Destination", image: ""  },
-  { title: "Rentals", desc: "We Rent and Help You Installation", image: ""  },
+  { title: "Products", desc: "We have all kinds of  hardware products", image: "/redGenerator.png" },
+  { title: "Service and repair", desc: "We Offer The Best Services", image: "/toolbox.png"  },
+  { title: "Free delivery", desc: "We Transport to Your Destination", image: "/forkLiftWithBoxes.png"  },
+  { title: "Rentals", desc: "We Rent and Help You Installation", image: "/redHandPalletTruck.png"  },
 ]
 
 
