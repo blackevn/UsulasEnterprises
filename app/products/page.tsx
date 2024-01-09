@@ -7,8 +7,6 @@ const page = async ({ searchParams }: HomeProps) => {
 
   const allProducts = await getProducts({
     manufacturer: searchParams.manufacturer,
-    year: searchParams?.year,
-    limit: searchParams.limit,
     model: searchParams.model,
     category: searchParams.category
   });

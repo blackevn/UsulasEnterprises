@@ -13,7 +13,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ item }: ProductCardProps) => {
-  const {  year, make, model, transmission, fuel } = item;
+  const { manufacturer, model, fuel } = item;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,7 +21,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
     <div className="car-card group">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
-          {make} {model}
+          {manufacturer} <span className="font-light">{model}</span>
         </h2>
       </div>
 

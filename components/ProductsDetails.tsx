@@ -73,7 +73,7 @@ const ProductDetails = ({ isOpen, closeModal, product }: ItemDetailsProps) => (
 
                 <div className='flex-1 flex flex-col gap-2'>
                   <h2 className='font-semibold text-xl capitalize'>
-                    {product.name} {product.category}
+                    {product.manufacturer} {product.model}
                   </h2>
 
                   <div className='mt-3 flex flex-wrap gap-4'>

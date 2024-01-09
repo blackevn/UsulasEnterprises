@@ -80,18 +80,12 @@ export interface ShowMoreProps {
 export interface AllProductsType {
   manufacturer: string
   image?: string
-  name?: string
-  fuel?: boolean
-  type?: string
+  fuel?: string
   category: string
   price?: number
   model: string;
   make?: string;
-  transmission?: string;
-  year: number;
-  drive?: string;
-  limit?: number
-
+  power?: string
 
 }
 

@@ -43,7 +43,6 @@ const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
     const filteredResults = allProducts.filter((product, i) => {
       return (
         (!manufacturer || product.manufacturer.toLowerCase() === manufacturer.toLowerCase()) &&
-        (!year || product.year.toString() === year) &&
         (!model || product.model.toLowerCase() === model.toLowerCase()) &&
         (!category || product.category.toLowerCase() === category.toLowerCase()) &&
         (product.manufacturer.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -84,16 +83,17 @@ const AllProducts = ({ allProducts, searchParams }:  ProductsPageProps) => {
           {/* Add more options as needed */}
         </select>
       </div>
-      <div>
+
+      {/* <div>
       
         <select className="p-2 border-2 rounded-md outline-0 bg-gray-200" value={year} onChange={(e) => setYear(e.target.value)}>
           <option value="">Select Year</option>
-          {/* Add options dynamically based on available years */}
+        
           <option value="2022">2022</option>
           <option value="2021">2021</option>
-          {/* Add more options as needed */}
+     
         </select>
-      </div>
+      </div> */}
 
       <div>
   

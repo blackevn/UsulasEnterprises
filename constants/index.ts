@@ -13,7 +13,10 @@ export const manufacturers = [
   "PrimePump",
   "Leo",
   "Koshin",
-  "DuroMax"
+  "DuroMax",
+  "Tiger",
+  "FG Wilson"
+
 
 ];
 

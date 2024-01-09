@@ -5,32 +5,66 @@ import "react-multi-carousel/lib/styles.css";
 const HeroCarousel = () => {
 
     const responsive = {
-      superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 3000, min: 2000 },
-        items: 5
-      },
-      desktop: {
-        breakpoint: { max: 2000, min: 1024 },
-        items: 3
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1
+    
+        desktop: {
+          breakpoint: {
+            max: 3000,
+            min: 1024
+          },
+          items: 3,
+          partialVisibilityGutter: 40
+        },
+        mobile: {
+          breakpoint: {
+            max: 464,
+            min: 0
+          },
+          items: 1,
+          partialVisibilityGutter: 30
+        },
+        tablet: {
+          breakpoint: {
+            max: 1024,
+            min: 464
+          },
+          items: 2,
+          partialVisibilityGutter: 30
+        
       }
     };
 
   return (
 
-    <div className='w-full h-full'>     
-        <Carousel responsive={responsive}>
-        <div className='w-full h-full bg-blacko'></div>
-        </Carousel>
-    </div>
+   
+<Carousel
+  additionalTransfrom={0}
+  arrows
+  autoPlaySpeed={3000}
+  centerMode={true}
+  className="w-full h-full bg-black"
+  dotListClass=""
+  draggable
+  focusOnSelect={false}
+  infinite={false}
+  itemClass=""
+  keyBoardControl
+  minimumTouchDrag={80}
+  pauseOnHover
+  renderArrowsWhenDisabled={false}
+  renderButtonGroupOutside={false}
+  renderDotsOutside={false}
+  responsive={responsive}
+  rewind={false}
+  rewindWithAnimation={false}
+  rtl={false}
+  shouldResetAutoplay
+  showDots={false}
+  sliderClass=""
+  slidesToSlide={1}
+  swipeable
+>
+  <div className='w-full h-full bg-black'></div>
+</Carousel>
   )
 }
 

@@ -28,7 +28,7 @@ const Hero = () => {
         </p>
 
         <CustomButton
-          text="Explore Cars"
+          text="Explore Products"
           modifier="bg-primary-blue text-white rounded-full mt-10"
           clickEvent={handleScroll}
           icon={FaArrowAltCircleRight}

@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
         : 
         <Link href={`/contact`}>
-        <CustomButton icon={FaPhone} text="Call an agent"/>
+        <CustomButton modifier="flex-row-reverse" icon={FaPhone} text="Call an agent"/>
         </Link>}
     </nav>
   </header>

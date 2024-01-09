@@ -8,8 +8,6 @@ export default async function Home({ searchParams}: HomeProps) {
 
   const allProducts = await getProducts({
     manufacturer: searchParams.manufacturer,
-    year: searchParams?.year,
-    limit: searchParams.limit,
     model: searchParams.model,
     category: searchParams.category
   });
