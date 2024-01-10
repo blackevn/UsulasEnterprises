@@ -10,7 +10,7 @@ export const AllProducts: AllProductsType[] = [
     fuel: ""
 },
     {
-    image: '',
+    image: '/HondaEBK1000.webp',
     category: 'Electric Generator',
     model: "EBK 1000",
     manufacturer: "Honda",
@@ -22,6 +22,14 @@ export const AllProducts: AllProductsType[] = [
     model: "EP2500CX",
     manufacturer: "Honda",
     power: "2.2 kVA"
+}  ,
+    {
+    image: '',
+    category: 'Electric Generator',
+    model: "EU7000IS",
+    manufacturer: "Honda",
+    power: "5.4kW running, 7 kW max",
+    fuel: "Gasoline"
 }  ,
     {
     image: '',

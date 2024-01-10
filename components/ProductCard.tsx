@@ -13,7 +13,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ item }: ProductCardProps) => {
-  const { manufacturer, model, fuel } = item;
+  const { manufacturer, model, image } = item;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +26,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
       </div>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={''} alt='item model' fill priority className='object-contain' />
+        <Image src={image} alt='item model' fill priority className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>

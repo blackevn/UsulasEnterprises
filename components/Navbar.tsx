@@ -43,12 +43,12 @@ const Navbar = () => {
       <CustomButton
         icon={FaArrowAltCircleRight}
         text='Browser All Products'
-        modifier='text-primary-blue rounded-full bg-white min-w-[130px]'
+        modifier='border-blue-500 border-2 text-primary-blue rounded-full bg-white min-w-[130px]'
         /> 
         </Link>
         : 
         <Link href={`/contact`}>
-        <CustomButton modifier="flex-row-reverse" icon={FaPhone} text="Call an agent"/>
+        <CustomButton modifier="flex-row-reverse " icon={FaPhone} text="Call an agent"/>
         </Link>}
     </nav>
   </header>

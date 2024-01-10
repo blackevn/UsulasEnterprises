@@ -6,7 +6,7 @@ const Services = () => {
 
     <div className="py-20">
         <h2 className="capitalize text-center text-4xl text-gray-700 font-thin">What we offer</h2>
-    <div className="w-full min-h-[200px] md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 items-center flex-wrap p-12 space-y-4">
+    <div className="w-full min-h-[200px] md:grid lg:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-8 p-12 space-y-4 md:space-y-0">
 
         {services.map((item) => (   
         

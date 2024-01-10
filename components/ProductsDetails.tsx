@@ -75,18 +75,24 @@ const ProductDetails = ({ isOpen, closeModal, product }: ItemDetailsProps) => (
                   <h2 className='font-semibold text-xl capitalize'>
                     {product.manufacturer} {product.model}
                   </h2>
-
+                  
                   <div className='mt-3 flex flex-wrap gap-4'>
-                    {Object.entries(product).map(([key, value]) => (
-                      <div className='flex justify-between gap-5 w-full text-right' key={key} >
-                        <h4 className='text-grey capitalize'>
-                          {key.split("_").join(" ")}
-                        </h4>
-                        <p className='text-black-100 font-semibold'>
-                          {value}
-                        </p>
-                      </div>
-                    ))}
+ 
+                    {Object.entries(product).map(([key, value]) => {
+                      if(key === 'image') return;
+                      
+                      return (
+                        <div className='flex justify-between gap-5 w-full text-right' key={key}>
+                          <h4 className='text-grey capitalize'>
+                            {key.split("_").join(" ")}  
+                          </h4>
+                          <p className='text-black-100 font-semibold'>
+                            {value}
+                          </p>
+                        </div>
+                      )
+                    })}
+
                   </div>
                 </div>
               </Dialog.Panel>

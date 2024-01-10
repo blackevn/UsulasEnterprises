@@ -79,7 +79,7 @@ export interface ShowMoreProps {
 
 export interface AllProductsType {
   manufacturer: string
-  image?: string
+  image: string
   fuel?: string
   category: string
   price?: number
