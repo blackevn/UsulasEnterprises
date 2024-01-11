@@ -8,7 +8,8 @@ const page = async ({ searchParams }: HomeProps) => {
   const allProducts = await getProducts({
     manufacturer: searchParams.manufacturer,
     model: searchParams.model,
-    category: searchParams.category
+    category: searchParams.category,
+    image: ''
   });
 
   
