@@ -12,16 +12,21 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ item }: ProductCardProps) => {
-  const { manufacturer, model, image } = item;
 
+  const { manufacturer, model, image, item: name } = item;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="car-card group">
       <div className="car-card__content">
-        <h2 className="car-card__content-title">
+        {model?.toString() || manufacturer?.toString() === "" ? <h2 className="car-card__content-title">
           {manufacturer} <span className="font-light">{model}</span>
         </h2>
+         : 
+        <h2 className="car-card__content-title">
+          {name}
+        </h2>
+        }
       </div>
 
       <div className='relative w-full h-40 my-3 object-contain'>
