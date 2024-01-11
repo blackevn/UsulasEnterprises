@@ -2,29 +2,37 @@ import { AllProductsType } from "@types"
 
 export const AllProducts: AllProductsType[] = [
     {
-    image: '',
+    image: '/generators/Perkins30KVA.png',
     category: 'Electric Generator',
-    model: "WH-001",
+    model: "30KVA",
     manufacturer: 'Perkins',
-    power: "5 KVA",
-    fuel: ""
+    power: "30 KVA",
+    fuel: "Diesel"
 },
     {
-    image: '/HondaEBK1000.webp',
+    image: '/generators/HondaEBK1000.png',
     category: 'Electric Generator',
     model: "EBK 1000",
     manufacturer: "Honda",
     power: "5 KVA"
 },
     {
-    image: '',
+    image: '/generators/HondaEP2500CX.png',
     category: 'Electric Generator',
     model: "EP2500CX",
     manufacturer: "Honda",
     power: "2.2 kVA"
 }  ,
     {
-    image: '',
+    image: '/generators/HondaSPG1500.png',
+    category: 'Electric Generator',
+    model: "SPG1500",
+    manufacturer: "Honda",
+    power: "1000 VA",
+    fuel: "Unleaded Gasoline"
+}  ,
+    {
+    image: '/generators/HondaEU7000IS.png',
     category: 'Electric Generator',
     model: "EU7000IS",
     manufacturer: "Honda",
@@ -32,87 +40,104 @@ export const AllProducts: AllProductsType[] = [
     fuel: "Gasoline"
 }  ,
     {
-    image: '',
+    image: '/generators/TigerTG950.png',
     category: 'Electric Generator',
     model: "TG 950",
     manufacturer: "Tiger",
     power: "800W"
 }  ,
     {
-    image: '',
+    image: '/generators/TigerTG2700.png',
     category: 'Electric Generator',
     model: "TG 2700",
     manufacturer: "Tiger",
     power: "5.5HP"
 }  ,
     {
-    image: '',
+    image: '/generators/FGWilsonPerkins175kVA.png',
     category: 'Electric Generator',
     model: "P175-6",
     manufacturer: "FG Wilson",
-    power: "175 KVA"
+    power: "175KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins60KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "60KVA",
+    manufacturer: "Perkins",
+    power: "60KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins250KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "250KVA",
+    manufacturer: "Perkins",
+    power: "250KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins12KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "12KVA",
+    manufacturer: "Perkins",
+    power: "12KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins15KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "15KVA",
+    manufacturer: "Perkins",
+    power: "15KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins20KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "20KVA",
+    manufacturer: "Perkins",
+    power: "20KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins30KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "30KVA",
+    manufacturer: "Perkins",
+    power: "30KVA"
 }  ,
     {
-    image: '',
+    image: '/generators/Perkins30KVA.png',
     category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    model: "30KVA",
+    manufacturer: "Perkins",
+    power: "30KVA"
 }  ,
     {
-    image: '',
-    category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    item: "4 Inch Hose",
+    image: '/hose/4INCHHOSEBLUE.png',
+    category: 'Hose',
+    diameter: "4 Inches"
 }  ,
     {
-    image: '',
-    category: 'Electric Generator',
-    model: "P175-6",
-    manufacturer: "FG Wilson",
-    power: "175 kVA"
+    item: "3 Inch Hose",
+    image: '/hose/4INCHHOSEBLUE.png',
+    category: 'Hose',
+    diameter: "3 Inches"
 }  ,
+    {
+    item: "2 Inch Hose",
+    image: '/hose/4INCHHOSEBLUE.png',
+    category: 'Hose',
+    diameter: "2 Inches"
+}  ,
+    {
+    item: "1 Inch Hose",
+    image: '/hose/FireHose.png',
+    category: 'Hose',
+    diameter: "1 Inches"
+}  ,
+    {
+    item: "Air Intake Pipe",
+    image: '/hose/AirIntakePipe.png',
+    category: 'Hose',
+    diameter: "3 Inches"
+}  ,
+
 ]

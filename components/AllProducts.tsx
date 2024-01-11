@@ -1,6 +1,6 @@
 'use client'
 
-import { ProductsPageProps } from "@types";
+import { AllProductsType, ProductsPageProps } from "@types";
 import { ChangeEvent, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { categories, manufacturers } from "@constants";
@@ -45,20 +45,20 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
 
   useEffect(() => {
     // Apply filters based on state variables
-    const filteredResults = allProducts.filter((product, i) => {
+    const filteredResults = allProducts.filter((product) => {
       return (
-        (!manufacturer || product.manufacturer.toLowerCase() === manufacturer.toLowerCase()) &&
-        (!model || product.model.toLowerCase() === model.toLowerCase()) &&
-        (!category || product.category.toLowerCase() === category.toLowerCase()) &&
-        (product.manufacturer.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.model.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          product.category.toLowerCase().includes(searchTerm.toLowerCase()))
+        (!manufacturer || (product.manufacturer && product.manufacturer.toLowerCase() === manufacturer.toLowerCase())) &&
+        (!model || (product.model && product.model.toLowerCase() === model.toLowerCase())) &&
+        (!category || (product.category && product.category.toLowerCase() === category.toLowerCase())) &&
+        (product.manufacturer?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          product.model?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          product.category?.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     });
-
-    // Update filtered products state
+    // Rest of your useEffect logic...
     setFilteredProducts(filteredResults);
-  }, [manufacturer, year, model, fuel, checkboxChecked, category, searchTerm]);
+  }, [allProducts, manufacturer, model, category, searchTerm]);
+  
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -79,7 +79,7 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Search products by name"
+          placeholder="Search products by name, brand or model"
         />
 
         <div className="flex gap-4 flex-wrap space-y-1 items-center md:space-y-0">

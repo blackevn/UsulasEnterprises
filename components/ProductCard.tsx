@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { calculateCarRent } from "@utils";
 import { AllProductsType, CarProps } from "@types";
 import CustomButton from "./CustomButton";
 import ProductDetails from "./ProductsDetails";
@@ -30,19 +29,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
       </div>
 
       <div className='relative flex w-full mt-2'>
-        {/* <div className='flex group-hover:invisible w-full justify-start text-grey'>
-          <div className='flex flex-col justify-center items-center gap-2'>
-            <Image src='/steering-wheel.svg' width={20} height={20} alt='steering wheel' />
-            <p className='text-[14px] leading-[17px]'>
-              {transmission === "a" ? "Automatic" : "Manual"}
-            </p>
-          </div>
-          <div className="car-card__icon">
-            <Image src="/tire.svg" width={20} height={20} alt="seat" />
-            <p className="car-card__icon-text"></p>
-          </div>
-      
-        </div> */}
+       
 
         <div className="car-card__btn-container">
           <CustomButton

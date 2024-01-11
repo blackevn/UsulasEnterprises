@@ -78,14 +78,17 @@ export interface ShowMoreProps {
 }
 
 export interface AllProductsType {
-  manufacturer: string
+  manufacturer?: string
   image: string
   fuel?: string
   category: string
   price?: number
-  model: string;
+  model?: string;
   make?: string;
   power?: string
+  length?: string
+  diameter?: string
+  item?: string
 
 }
 
