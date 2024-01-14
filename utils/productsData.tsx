@@ -96,20 +96,6 @@ export const AllProducts: AllProductsType[] = [
     power: "20KVA"
 }  ,
     {
-    image: '/generators/Perkins30KVA.png',
-    category: 'Electric Generator',
-    model: "30KVA",
-    manufacturer: "Perkins",
-    power: "30KVA"
-}  ,
-    {
-    image: '/generators/Perkins30KVA.png',
-    category: 'Electric Generator',
-    model: "30KVA",
-    manufacturer: "Perkins",
-    power: "30KVA"
-}  ,
-    {
     item: "4 Inch Hose",
     image: '/hose/4INCHHOSEBLUE.png',
     category: 'Hose',
@@ -138,6 +124,60 @@ export const AllProducts: AllProductsType[] = [
     image: '/hose/AirIntakePipe.png',
     category: 'Hose',
     diameter: "3 Inches"
+}  ,
+  
+    {
+        image: '',
+        category: 'Water Pump',
+        model: "24CL",
+        manufacturer: "LuckyPro",
+        power: "2HP ",
+        capacity: "50L"
+    
+}  ,
+    {
+        image: '',
+        category: 'Water Pump',
+        model: "MJS100",
+        manufacturer: "LuckyPro",
+        power: "1.5 kW",
+        capacity: "450L/min"
+    
+}  ,
+    {
+        image: '',
+        category: 'Water Pump',
+        model: "MJSW/1C-E",
+        manufacturer: "LuckyPro",
+        power: "1.5 HP",
+        capacity: "450L/min"
+    
+}  ,
+    {
+        image: '',
+        category: 'Water Pump',
+        model: "MJSW/1C-E",
+        manufacturer: "LuckyPro",
+        power: "1.5 HP",
+        capacity: "450L/min"
+    
+}  ,
+    {
+        image: '',
+        category: 'Lawn Mower',
+        model: "YTH22V46",
+        manufacturer: "Husqvarna",
+        power: "22 HP",
+        fuel: "Gasoline"
+    
+}  ,
+    {
+        image: '',
+        category: 'Lawn Mower',
+        model: "LC 219P",
+        manufacturer: "`Husqvarna`",
+        fuel: "Gasoline"
+    
 }  ,
 
 ]

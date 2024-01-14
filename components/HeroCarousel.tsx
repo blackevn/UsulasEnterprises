@@ -63,9 +63,7 @@ const HeroCarousel = () => {
   slidesToSlide={1}
   swipeable
 >
-  <div className='w-full h-full bg-black p-20 rounded-full'></div>
-  <div className='w-full h-full bg-black p-20 rounded-full'></div>
-  <div className='w-full h-full bg-black p-20 rounded-full'></div>
+<div></div>
 </Carousel>
   )
 }

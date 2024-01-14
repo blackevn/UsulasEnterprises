@@ -89,6 +89,7 @@ export interface AllProductsType {
   length?: string
   diameter?: string
   item?: string
+  capacity?: string
 
 }
 

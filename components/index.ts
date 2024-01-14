@@ -10,6 +10,9 @@ import AllProducts from "./AllProducts";
 import SelectFilter from "./SelectFilter";
 import Services from "./Services";
 import ServicesCard from "./ServicesCard";
+import ContactUs from "./ContactUs";
+import LandS from "./LandS";
+import ProductsCarousel from "./ProductsCarousel";
 
 export {
   
@@ -22,6 +25,9 @@ export {
   SearchBar,
   Services,
   SelectFilter,
-  ServicesCard
+  ServicesCard,
+  ContactUs,
+  LandS,
+  ProductsCarousel
 
 };
