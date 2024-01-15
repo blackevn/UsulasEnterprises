@@ -22,18 +22,17 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
       superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+      items: 4,
       
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      partialVisibilityGutter: 250
+      items: 3,
+
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      partialVisibilityGutter: 40
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -58,8 +57,6 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
         <Carousel
         additionalTransfrom={0}
         arrows
-        partialVisible
-        autoPlay
         autoPlaySpeed={3000}
         centerMode={false}
         className="h-auto"

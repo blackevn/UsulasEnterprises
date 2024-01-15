@@ -36,7 +36,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
       <div className='relative flex w-full mt-2'>
        
 
-        <div className="car-card__btn-container">
+        <div className="w-full">
           <CustomButton
             modifier="w-full hover:bg-blue-500 rounded-lg p-2 text-white" 
             text='View More'

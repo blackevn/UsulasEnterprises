@@ -175,7 +175,7 @@ export const AllProducts: AllProductsType[] = [
         image: '',
         category: 'Lawn Mower',
         model: "LC 219P",
-        manufacturer: "`Husqvarna`",
+        manufacturer: "Husqvarna",
         fuel: "Gasoline"
     
 }  ,
