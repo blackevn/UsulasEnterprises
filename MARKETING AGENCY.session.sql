@@ -85,8 +85,8 @@ CREATE TABLE Vendors (
 );
 
 
-
-
+--@BLOCK
+DROP TABLE Services;
 
 --@BLOCK
 SHOW TABLES;
