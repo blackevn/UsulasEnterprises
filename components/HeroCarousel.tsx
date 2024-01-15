@@ -4,9 +4,15 @@ import "react-multi-carousel/lib/styles.css";
 import Link from "next/link";
 import { CustomButton } from "@components";
 import { FaArrowCircleRight } from "react-icons/fa";
+import { AllProductsType } from "@types";
+import { manufacturers } from "@constants";
+
+export interface BannerProps {
+  banner: AllProductsType[]
+}
 
 
-const Header = ({}) => {
+const Header = ({banner}: BannerProps ) => {
 
        
 const responsive = {
@@ -65,19 +71,17 @@ const responsive = {
                     shouldResetAutoplay
                     sliderClass=""
                     slidesToSlide={1}
-                    swipeable
-                   
+                    swipeable             
                     >
       
-                    
                    {banner.map(ban => (
 
                
-                          <div key={ban._id} className={`header`} >
+                          <div key={ban.model} className={`header`} >
 
                             <div className="bannerBG">
 
-                              <p className="text-7xl font-black bg-clip-text text-transparent opacity-50 bg-gradient-to-r from-pink-500 to-violet-500">{ban.product}</p>
+                              <p className="text-4xl md:text-7xl lg:text-9xl font-black bg-clip-text text-white">{ban.manufacturer}</p>
 
                             </div>
 
@@ -87,11 +91,11 @@ const responsive = {
 
                                 <div className="space-y-4">
 
-                                <h1 className="headerProductName">{ban.product}</h1>
+                                <h1 className="headerProductName">{ban.model}</h1>
 
-                                <p className="w-full sm:max-w-md text-xl text-gray-400 font-bold">Nulla aliquip esse nulla officia. Sunt ad cillum irure officia elit exercitation veniam. </p>
+                                <p className="w-full sm:max-w-md text-xl text-black font-bold">Nulla aliquip esse nulla officia. Sunt ad cillum irure officia elit exercitation veniam. </p>
                              
-                                <CustomButton icon={FaArrowCircleRight} text={ban.buttonText} modifier="btn"/>
+                                <CustomButton icon={FaArrowCircleRight} text={`View all ${ban.manufacturer} products`} modifier="bg-white"/>
 
                                 </div>
                            
@@ -101,7 +105,7 @@ const responsive = {
                         
                             <div className="grid place-items-center h-full w-full md:w-[50%] p-8">
                          
-                             <img className="max-h-[500px]" src={urlFor(ban.image)} alt={ban.product} />
+                             <img className="max-h-[500px]" src={ban.image} alt={ban.make} />
                         
                             </div>
                        

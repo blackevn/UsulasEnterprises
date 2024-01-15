@@ -4,19 +4,20 @@ import { AllProductsType, ProductsPageProps } from "@types";
 import { ChangeEvent, useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import { categories, manufacturers } from "@constants";
-import SearchBar from "./Searchbar";
-import SelectFilter from "./SelectFilter";
 import {LuSearchX} from "react-icons/lu"
 import { CustomButton } from "@components";
-import { usePathname } from "next/navigation";
-import { IconBaseProps } from "react-icons";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { GrPowerReset } from "react-icons/gr";
 import Button from "./CustomButton";
-import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
+import { IconBaseProps } from "react-icons";
 
 const AllProducts = ({ allProducts }:  ProductsPageProps) => {
 
     const isDataEmpty = !Array.isArray(allProducts) || allProducts.length < 1 || !allProducts;
+    const param = useSearchParams()
+    const router = useRouter()
+    const productManufacturer = param?.get('product')
 
   const [manufacturer, setManufacturer] = useState('');
   const [year, setYear] = useState('');
@@ -25,9 +26,10 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
   const [category, setCategory] = useState('');
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [checkboxChecked, setCheckboxChecked] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState(productManufacturer ? productManufacturer :  '');
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [currentPage, setCurrentPage] = useState(1);
+
 
   const path = usePathname()
   const totalProducts = filteredProducts.length;
@@ -41,6 +43,12 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
     setYear("")
     setSearchTerm("")
     setManufacturer("")
+  }
+
+  console.log(productManufacturer);
+  
+  const goBack = () => {
+    router.back()
   }
 
   useEffect(() => {
@@ -57,7 +65,7 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
     });
     // Rest of your useEffect logic...
     setFilteredProducts(filteredResults);
-  }, [allProducts, manufacturer, model, category, searchTerm]);
+  }, [allProducts, manufacturer, model, category, searchTerm, productManufacturer]);
   
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -67,6 +75,9 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
 
   return (
     <div className={`px-20 ${isPath ? "pt-20" : "py-5"}`}>
+
+
+     {productManufacturer && <CustomButton modifier="bg-gray-200 p-2" clickEvent={goBack} icon={FaArrowAltCircleLeft} text="Back"/>}
 
       <h2 className="text-5xl font-bold my-6 ">Products</h2>
       <h2 className="text-2xl my-6">Browse the Products</h2>

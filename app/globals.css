@@ -13,6 +13,23 @@
 
 /* START: General styles */
 
+.header{
+
+  @apply rounded-3xl w-full relative overflow-hidden min-h-[600px] max-h-[700px]
+         lg:flex-row md:justify-between md:items-center p-8 flex flex-col-reverse 
+
+}
+
+.filterItem{
+  @apply flex flex-row-reverse gap-2 items-center cursor-pointer 
+}
+
+
+.bannerBG{
+
+  @apply absolute top-10 right-96 -z-10 flex items-end scale-150 overflow-hidden
+
+}
 .padding-x {
   @apply sm:px-16 px-6;
 }

@@ -8,6 +8,7 @@ import { CustomButton } from '@components';
 import { IconBaseProps } from 'react-icons';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 import Link from 'next/link';
+import FilterItem from './FilterItem';
 
 interface ProductsCarouselProps {
     title: string
@@ -45,13 +46,20 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
 
   return (
     <div className='px-20 py-10'>
+        <div className='grid place-items-center md:block'>
+        <h2 className="text-4xl font-bold text-center md:text-start">{title}</h2>
+        <div className=' grid place-items-center  md:flex justify-between items-center mb-6 mt-4 md:mt-0 space-y-2'>
+        <h2 className="text-xl text-center md:text-start">Browse {description}</h2>
+   
+        <FilterItem 
+        id={0} 
+        icon={FaArrowAltCircleRight} 
+        name={title} 
+        text='View all'
+        plural={ title.endsWith('s') ? "es" : "s"}
+        selected/>
 
-        <h2 className="text-4xl font-bold ">{title}</h2>
-        <div className='w-full flex justify-between items-center mb-6'>
-        <h2 className="text-xl ">Browse {description}</h2>
-        <Link href={`/products=${title}`}>
-        <CustomButton modifier="flex-row-reverse" text={`See all ${title}`} icon={FaArrowAltCircleRight}/>
-        </Link>
+        </div>
         </div>
 
         <Carousel

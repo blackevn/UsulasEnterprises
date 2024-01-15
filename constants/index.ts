@@ -17,7 +17,6 @@ export const manufacturers = [
   "Tiger",
   "FG Wilson"
 
-
 ];
 
 export const services = [

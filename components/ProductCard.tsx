@@ -38,7 +38,7 @@ const ProductCard = ({ item }: ProductCardProps) => {
 
         <div className="w-full">
           <CustomButton
-            modifier="w-full hover:bg-blue-500 rounded-lg p-2 text-white" 
+            modifier="w-full hover:bg-blue-500 hover:text-white rounded-lg p-2 text-gray-500" 
             text='View More'
             icon={FaArrowAltCircleRight}
             clickEvent={() => setIsOpen(true)}

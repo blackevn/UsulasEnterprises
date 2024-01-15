@@ -4,9 +4,9 @@ import Image from "next/image";
 
 import { CustomButton } from "@components";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import HeroCarousel from "./HeroCarousel";
+import HeroCarousel, { BannerProps } from "./HeroCarousel";
 
-const Hero = () => {
+const Hero = ({banner}: BannerProps) => {
   const handleScroll = () => {
     const nextSection = document.getElementById("discover");
 
@@ -16,8 +16,8 @@ const Hero = () => {
   };
 
   return (
-          <div className="pt-20 h-[400px]">
-            <HeroCarousel/>
+          <div className="pt-20 h-auto bg-gradient-to-r from-blue-500 to-blue-200">
+            <HeroCarousel banner={banner} />
           </div>
     
   );

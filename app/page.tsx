@@ -2,6 +2,7 @@ import { HomeProps } from "@types";
 
 import getProducts from "./actions/getProducts";
 import { ContactUs, Hero, ProductsCarousel, Services } from "@/components";
+import getBanner from "./actions/getBanner";
 
 
 export default async function Home({ searchParams}: HomeProps) {
@@ -13,6 +14,8 @@ export default async function Home({ searchParams}: HomeProps) {
     image: ""
   });
 
+  const allBanners = await getBanner()
+
   const sortProducts = ( category: string) => {
     const array = [...allProducts]
     const onlyFilteredProduct = array.filter(product => product.category === category)   
@@ -22,11 +25,12 @@ export default async function Home({ searchParams}: HomeProps) {
   
   return (
     <main className='overflow-hidden'>
-      <Hero />
+      <Hero banner={allBanners} />
+      
       <Services/>
       {/* <AllProducts searchParams={searchParams} allProducts={allProducts}/> */}
       <ProductsCarousel 
-        title={"Electric Generators"} 
+        title={"Electric Generator"} 
         description={"Electric Generators"} 
         products={sortProducts("Electric Generator")}/>
       <ProductsCarousel 
@@ -34,11 +38,11 @@ export default async function Home({ searchParams}: HomeProps) {
         description={"Hose"} 
         products={sortProducts("Hose")}/>
       <ProductsCarousel 
-        title={"Water Pumps"} 
+        title={"Water Pump"} 
         description={"Water Pumps"} 
         products={sortProducts("Water Pump")}/>
       <ProductsCarousel 
-        title={"Lawn Mowers"} 
+        title={"Lawn Mower"} 
         description={"Lawn Mowers"} 
         products={sortProducts("Lawn Mower")}/>
       <ContactUs/>
