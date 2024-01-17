@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-
 import CustomButton from "./CustomButton";
 import { FaArrowAltCircleRight, FaPhone } from "react-icons/fa";
 import NavLink from "./NavLink";
@@ -25,17 +24,10 @@ const Navbar = () => {
 
             <header className='w-full  absolute z-10'>
             <nav className=' mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent'>
-              {/* <Link href='/' className='flex justify-center items-center'>
-                <Image
-                  src='/logo.svg'
-                  alt='logo'
-                  width={118}
-                  height={18}
-                  className='object-contain'
-                />
-              </Link> */}
-
-              <h1 className="font-black text-3xl">Usulas</h1>
+                
+              <Link href='/'>
+              <h1 className="font-black lg:text-3xl text-blue-700">Usulas Enterprise</h1>
+              </Link>
 
               <div className="lg:flex gap-4 items-center justify-between hidden">
               {navlinks.map((item) => <NavLink link={item.link} name={item.name}/>)}

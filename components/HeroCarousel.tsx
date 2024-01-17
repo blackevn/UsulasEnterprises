@@ -1,20 +1,27 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import Link from "next/link";
 import { CustomButton } from "@components";
 import { FaArrowCircleRight } from "react-icons/fa";
-import { AllProductsType } from "@types";
-import { manufacturers } from "@constants";
+import FilterItem from "./FilterItem";
+import { IconBaseProps } from "react-icons";
+import { plural } from "./ProductsCarousel";
+
 
 export interface BannerProps {
-  banner: AllProductsType[]
+  backGround: string
+  text: string
+  description: string
+  buttonText: string
 }
 
+ export interface HeroCarouselProps {
+  banner: BannerProps[]
+}
 
-const Header = ({banner}: BannerProps ) => {
+const Header = ({ banner }: HeroCarouselProps ) => {
 
-       
+ 
 const responsive = {
 
     superLargeDesktop: {
@@ -41,7 +48,6 @@ const responsive = {
 
   }
 
-
   return <>
 
         <div className="grid place-items-center w-full bg-base-100 dark:bg-gray-800">
@@ -53,7 +59,7 @@ const responsive = {
                     autoPlay
                     autoPlaySpeed={3000}
                     centerMode={false}
-                    className="w-full h-full my-8"
+                    className="w-full h-full space-y-4"
                     dotListClass=""
                     responsive={responsive}
                     draggable
@@ -76,44 +82,47 @@ const responsive = {
       
                    {banner.map(ban => (
 
-               
-                          <div key={ban.model} className={`header`} >
+                  <div key={ban.text} className={` header mx-8`} style={{background: ban.backGround, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}} >
 
-                            <div className="bannerBG">
+                    <div className="bannerBG">
 
-                              <p className="text-4xl md:text-7xl lg:text-9xl font-black bg-clip-text text-white">{ban.manufacturer}</p>
+                    </div>
 
-                            </div>
+                    <div className="w-full lg:w-[50%] h-full grid place-items-center ">
 
-                            <div className="w-full md:w-[50%] h-full grid place-items-center ">
+                      <div className="space-y-4 w-full grid place-items-center z-10">
 
-                              <div className="space-y-4 w-full grid place-items-center">
+                        <div className="space-y-4 p-4">
+                        <p className="w-full sm:max-w-md font-thin lg:text-xl text-white lg:bg-black/30 bg-black/40 rounded-2xl p-6">{ban.description}</p>
+                        <div className="flex justify-start">
+                        <FilterItem modifier="p-4
+                                              flex
+                                              items-center
+                                              justify-center
+                                              gap-2
+                                              rounded-full
+                                              btn-sm
+                                              text-blue-600
+                                              text-[12px]
+                                              lg: text-md bg-white" 
+                                              id={0} icon={FaArrowCircleRight} text="Browse"  name={ban.text} plural={plural(ban.text)}/>
+                        </div>
 
-                                <div className="space-y-4">
+                        </div>
 
-                                <h1 className="headerProductName">{ban.model}</h1>
+                      </div>
 
-                                <p className="w-full sm:max-w-md text-xl text-black font-bold">Nulla aliquip esse nulla officia. Sunt ad cillum irure officia elit exercitation veniam. </p>
-                             
-                                <CustomButton icon={FaArrowCircleRight} text={`View all ${ban.manufacturer} products`} modifier="bg-white"/>
+                    </div>
 
-                                </div>
-                           
-                              </div>
-                        
-                            </div>
-                        
-                            <div className="grid place-items-center h-full w-full md:w-[50%] p-8">
-                         
-                             <img className="max-h-[500px]" src={ban.image} alt={ban.make} />
-                        
-                            </div>
-                       
-                          </div>
-                   
+                    <div className="grid place-items-center h-full w-full md:w-[50%] p-8">
+
+                    
+
+                    </div>
+
+                    </div>
                    ))}
-                   
-               
+                     
         </Carousel>
 
         </div>

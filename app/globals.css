@@ -15,8 +15,8 @@
 
 .header{
 
-  @apply rounded-3xl w-full relative overflow-hidden min-h-[600px] max-h-[700px]
-         lg:flex-row md:justify-between md:items-center p-8 flex flex-col-reverse 
+  @apply  w-full relative overflow-hidden lg:min-h-[600px] lg:max-h-[700px] max-h-[350px]
+         lg:flex-row md:justify-between md:items-center p-8 flex flex-col-reverse m-4
 
 }
 
@@ -27,7 +27,7 @@
 
 .bannerBG{
 
-  @apply absolute top-10 right-96 -z-10 flex items-end scale-150 overflow-hidden
+  @apply absolute top-0 right-0 bottom-0 left-0 flex items-end scale-150 overflow-hidden bg-gradient-to-r from-blue-200 to-transparent
 
 }
 .padding-x {

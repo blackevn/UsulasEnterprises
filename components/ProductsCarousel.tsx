@@ -16,6 +16,11 @@ interface ProductsCarouselProps {
     products: AllProductsType[]
 }
 
+export const plural = (word: string) => {
+ const title = word.endsWith('s') ? "es" : "s"
+ return title
+}
+
 const ProductsCarousel = ({title, products, description }: ProductsCarouselProps) => {
 
     const responsive = {
@@ -45,6 +50,7 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
 
 
   return (
+
     <div className='px-20 py-10'>
         <div className='grid place-items-center md:block'>
         <h2 className="text-4xl font-bold text-center md:text-start">{title}</h2>
@@ -56,7 +62,7 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
         icon={FaArrowAltCircleRight} 
         name={title} 
         text='View all'
-        plural={ title.endsWith('s') ? "es" : "s"}
+        plural={plural(title)}
         selected/>
 
         </div>
@@ -86,8 +92,7 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
         sliderClass=""
         slidesToSlide={1}
         swipeable
-        >
-         
+        > 
             {products.map((product) => ( <div className='mx-4 my-2' key={product.model}><ProductCard item={product}/></div>))}
   
         </Carousel>

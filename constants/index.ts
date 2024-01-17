@@ -55,7 +55,6 @@ export const navlinks = [
    link: "/about",
    name: "About"
   },
- 
 ]
 
 

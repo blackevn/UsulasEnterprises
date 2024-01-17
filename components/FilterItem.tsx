@@ -12,9 +12,10 @@ type FilterItemProps = {
     selected?: boolean
     text?: string
     plural?: string
+    modifier?: string
 }
 
-const FilterItem: React.FC<FilterItemProps> = ({ icon: Icon, name = "Categories", selected, text, plural }) => {
+const FilterItem: React.FC<FilterItemProps> = ({ icon: Icon, name = "Categories", selected, text, plural, modifier }) => {
 
 const params = useSearchParams()
 const router = useRouter()
@@ -48,7 +49,7 @@ const handleParams = useCallback(() => {
         
                 <div
                 onClick={handleParams}
-                className={` ${selected && 'bg-gray-3'} filterItem`}>                
+                className={` ${selected && 'bg-gray-3'} filterItem ${modifier}`}>                
                     <Icon className="text-lg lg:text-2xl "/>
                     <h1 className="text-[12px] md:text-md min-w-[70px] lg:min-w-[80px] text-center">{text} <span className="font-bold">{name}{plural}</span></h1>
                 </div>
