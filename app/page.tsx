@@ -1,7 +1,7 @@
 import { HomeProps } from "@types";
 
 import getProducts from "./actions/getProducts";
-import { ContactUs, Hero, ProductsCarousel, Services } from "@/components";
+import { Brands, ContactUs, Hero, ProductsCarousel, Services } from "@/components";
 import getBanner from "./actions/getBanner";
 
 
@@ -26,7 +26,7 @@ export default async function Home({ searchParams}: HomeProps) {
   return (
     <main className='overflow-hidden'>
       <Hero banner={allBanners} />
-      
+      <Brands/>
       <Services/>
       {/* <AllProducts searchParams={searchParams} allProducts={allProducts}/> */}
       <ProductsCarousel 

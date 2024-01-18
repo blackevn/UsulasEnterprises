@@ -51,7 +51,7 @@ const ProductsCarousel = ({title, products, description }: ProductsCarouselProps
 
   return (
 
-    <div className='px-20 py-10'>
+    <div className='px-5 lg:px-20 py-10'>
         <div className='grid place-items-center md:block'>
         <h2 className="text-4xl font-bold text-center md:text-start">{title}</h2>
         <div className=' grid place-items-center  md:flex justify-between items-center mb-6 mt-4 md:mt-0 space-y-2'>

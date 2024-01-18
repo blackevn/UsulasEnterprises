@@ -13,6 +13,7 @@ import ServicesCard from "./ServicesCard";
 import ContactUs from "./ContactUs";
 import LandS from "./LandS";
 import ProductsCarousel from "./ProductsCarousel";
+import Brands from "./Brands";
 
 export {
   
@@ -28,6 +29,7 @@ export {
   ServicesCard,
   ContactUs,
   LandS,
-  ProductsCarousel
+  ProductsCarousel,
+  Brands
 
 };

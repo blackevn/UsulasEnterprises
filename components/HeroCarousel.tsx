@@ -6,6 +6,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import FilterItem from "./FilterItem";
 import { IconBaseProps } from "react-icons";
 import { plural } from "./ProductsCarousel";
+import { useWidth } from "@hooks";
 
 
 export interface BannerProps {
@@ -21,13 +22,15 @@ export interface BannerProps {
 
 const Header = ({ banner }: HeroCarouselProps ) => {
 
+  const [ width ] = useWidth()
+
  
 const responsive = {
 
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+      items: 2,
       
     },
     desktop: {
@@ -55,10 +58,9 @@ const responsive = {
         <Carousel
                     additionalTransfrom={0}
                     arrows
-                    partialVisible
                     autoPlay
                     autoPlaySpeed={3000}
-                    centerMode={false}
+                    centerMode={ width >= 1700}
                     className="w-full h-full space-y-4"
                     dotListClass=""
                     responsive={responsive}
