@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+   display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@
 .header{
 
   @apply  w-full relative overflow-hidden lg:min-h-[600px] lg:max-h-[700px] max-h-[350px]
-         lg:flex-row md:justify-between md:items-center p-8 flex flex-col-reverse m-4
+         lg:flex-row md:justify-between md:items-center p-8 flex flex-col-reverse
 
 }
 
@@ -27,7 +31,7 @@
 
 .bannerBG{
 
-  @apply absolute top-0 right-0 bottom-0 left-0 flex items-end scale-150 overflow-hidden bg-gradient-to-r from-blue-200 to-transparent
+  @apply absolute top-0 right-0 bottom-0 left-0 flex items-start scale-150 overflow-hidden bg-gradient-to-r from-blue-200 to-transparent
 
 }
 .padding-x {

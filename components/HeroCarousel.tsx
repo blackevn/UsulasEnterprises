@@ -61,6 +61,7 @@ const responsive = {
                     autoPlay
                     autoPlaySpeed={3000}
                     centerMode={ width >= 1700}
+
                     className="w-full h-full space-y-4"
                     dotListClass=""
                     responsive={responsive}
@@ -84,7 +85,7 @@ const responsive = {
       
                    {banner.map(ban => (
 
-                  <div key={ban.text} className={` header mx-8`} style={{background: ban.backGround, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}} >
+                  <div key={ban.text} className={` header`} style={{background: ban.backGround, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}} >
 
                     <div className="bannerBG">
 
