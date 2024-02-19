@@ -96,7 +96,7 @@ const responsive = {
                       <div className="space-y-4 w-full grid place-items-center z-10">
 
                         <div className="space-y-4 p-4">
-                        <p className="w-full sm:max-w-md font-thin lg:text-xl text-white lg:bg-black/30 bg-black/40 rounded-2xl p-6">{ban.description}</p>
+                        <p className="w-full sm:max-w-md lg:font-thin lg:text-xl font-thin text-white lg:bg-black/30 rounded-2xl p-6">{ban.description}</p>
                         <div className="flex justify-start">
                         <FilterItem modifier="p-4
                                               flex

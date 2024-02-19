@@ -31,7 +31,7 @@
 
 .bannerBG{
 
-  @apply absolute top-0 right-0 bottom-0 left-0 flex items-start scale-150 overflow-hidden bg-gradient-to-r from-blue-200 to-transparent
+  @apply absolute top-0 right-0 bottom-0 left-0 flex items-start scale-150 overflow-hidden bg-black/50 lg:bg-gradient-to-r from-blue-200 to-transparent
 
 }
 .padding-x {
