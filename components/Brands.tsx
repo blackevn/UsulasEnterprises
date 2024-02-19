@@ -19,7 +19,7 @@ const Brands = () => {
     const [ width ] = useWidth()
     
   return (
-    <div className="flex justify-between items-center w-full overflow-x-scroll py-10 lg:py-20">
+    <div className="flex justify-between items-center w-full overflow-x-scroll py-10 lg:py-20 px-4 lg:px-20">
         {brandImages.map(image => (<Image alt="brand images" className="w-20 lg:w-40" width={width <= 700 ? 200 : 150} height={width <= 700 ? 200 : 150} src={image}/>))}
     </div>
   )

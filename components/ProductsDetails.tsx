@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { AllProductsType } from "@types";
+import { FaAt, FaPhone, FaPhoneAlt } from "react-icons/fa";
 // import { generateCarImageUrl } from "@utils";
 
 interface ItemDetailsProps {
@@ -84,6 +85,20 @@ const ProductDetails = ({ isOpen, closeModal, product }: ItemDetailsProps) => (
                     })}
 
                   </div>
+                </div>
+                <div className="w-full h-20 bg-gray-400 rounded-md grid grid-cols-2 items-center p-4">
+                    <div>
+                      <div className="flex items-center gap-4 ">
+                        <FaPhoneAlt className=""/>
+                        <h1>0248169258</h1>
+                      </div>
+                    </div>
+                    <div>
+                    <div className="flex items-center gap-4">
+                        <FaAt className=""/>
+                        <h1>info@usulas.com</h1>
+                      </div>
+                    </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

@@ -74,7 +74,7 @@ const AllProducts = ({ allProducts }:  ProductsPageProps) => {
 
 
   return (
-    <div className={`px-20 ${isPath ? "pt-20" : "py-5"}`}>
+    <div className={`px-4 lg:px-20 ${isPath ? "pt-20" : "py-5"}`}>
 
 
      {productManufacturer && <CustomButton modifier="bg-gray-200 p-2" clickEvent={goBack} icon={FaArrowAltCircleLeft} text="Back"/>}
